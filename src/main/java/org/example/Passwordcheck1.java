@@ -31,10 +31,10 @@ public class Passwordcheck1 {
         String specialCharacters = "!@#$%^&*()-_=+[]{};:'\"|,.<>?/";
         for (char c : password.toCharArray()) {
             if (specialCharacters.indexOf(c) >= 0) {
-                return true; // Found a special character
+                return true;
             }
         }
-        return false; // No special character found
+        return false;
     }
 
 }

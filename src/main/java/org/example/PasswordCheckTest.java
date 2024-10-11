@@ -12,6 +12,17 @@ public class PasswordCheckTest {
         assertTrue(PasswordCheck.isPasswordlengthValid(password));
     }
     @Test
+    public void testPasswordTooShort() {
+        String password = "Short1";
+        assertFalse(PasswordCheck.isPasswordLengthValid(password));
+    }
+
+    @Test
+    public void testPasswordTooLong() {
+        String password = "ThisPasswordIsWayTooLong123";
+        assertFalse(PasswordCheck.isPasswordLengthValid(password));
+    }
+    @Test
     public void digitstest (){
         String password = "Malekch15";
         assertTrue(PasswordCheck.digits(password));
@@ -30,26 +41,14 @@ public class PasswordCheckTest {
         assertFalse(PasswordCheck.passwordcommon(password));
 
     }
-    public void testPasswordTooShort() {
-        String password = "Short1";
-        assertFalse(PasswordCheck.isPasswordLengthValid(password));
-    }
 
-    // Test for too long password
-    @Test
-    public void testPasswordTooLong() {
-        String password = "ThisPasswordIsWayTooLong123";
-        assertFalse(PasswordCheck.isPasswordLengthValid(password));
-    }
 
-    // Test for empty password
     @Test
     public void testEmptyPassword() {
         String password = "";
         assertFalse(PasswordCheck.isPasswordLengthValid(password));
     }
 
-    // Test for password containing a digit
     @Test
     public void testPasswordContainsDigit() {
         String password = "Password123";

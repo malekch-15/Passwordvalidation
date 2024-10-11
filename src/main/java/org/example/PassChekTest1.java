@@ -18,7 +18,7 @@ public class PassChekTest1 {
     public void weakPassword(){
        String weakpass = "Malekch1";
        assertTrue(Passwordcheck1.containsDigit(weakpass));
-        String strongPassword = "Str0ngPassword!"; // Strong password
+        String strongPassword = "Str0ngPassword!";
         assertFalse(Passwordcheck1.isWeakPassword(strongPassword));
     }
 
@@ -29,10 +29,10 @@ public class PassChekTest1 {
     }
     @Test
     public void testPasswordContainsSpecialCharacter() {
-        String passwordWith = "Password@123"; // Password with special character
+        String passwordWith = "Password@123";
         assertTrue(Passwordcheck1.SpecialCharacter(passwordWith));
 
-        String passwordWithout = "Password123"; // Password without special character
+        String passwordWithout = "Password123";
         assertFalse(Passwordcheck1.SpecialCharacter(passwordWithout));
     }
 }
